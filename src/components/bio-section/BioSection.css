@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+.bio {
+    height: 100%;
+    /* background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
+    display: grid;
+    padding: 1.5rem;
+    justify-content: center;
+}
+
+.bio .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+}
+
+.bio .container.reverse {
+    flex-direction: row-reverse;
+}
+
+.bio .about_info {
+    padding-left: 68px;
+    margin-bottom: 30px;
+}
+
+.bio .about_info h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.bio .about_info p {
+    color: #727272;
+    font-size: 30px;
+    line-height: 50px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+
+}
+
+.bio figure {
+    width: 100%;
+    /* aspect-ratio: 8 / 5; */
+
+    transition: background 0.2s;
+
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 1.5rem; */
+}
+
+
+
+.bio figure img {
+    transform:
+        translateX(calc(var(--hover) * -15%)) scale(calc(1 + (var(--hover) * 0.2)));
+    transition: transform 0.2s;
+}
+
+.bio .bio-section {
+    --hover: 0;
+    max-width: 1140px;
+}
+
+.bio .bio-section:hover {
+    --hover: 1;
+}
+
+/* --breakpoint-sm: 576px;
+--breakpoint-md: 768px; 
+*/
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .bio {
+        height: 100%;
+        width: 100%;
+        justify-content: right;
+    }
+    .bio .bio-section {
+        width: 100%;
+    }
+
+    .bio .bio-section .container .about_info {
+    }
+    
+    .bio .container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: unset;
+        flex-direction: row;
+    }
+    .bio .container figure{
+        width: 100%;
+    }
+
+    .bio .about_info {
+        padding-left: unset;
+        margin-bottom: 3px;
+    }
+    .bio .about_info p{
+        word-wrap:break-word;
+        font-size: 30px;
+        line-height: 2.5rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .bio {
+        height: 100%;
+    }
+    .bio .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+
+    .bio .about_info {
+        padding-left: 10px;
+    }
+    .bio .about_info h3 {
+        padding: 0.4rem;
+    }
+    .bio .about_info p {
+        color: #727272;
+        font-size: 21px;
+        line-height: 30px;
+    }
+}

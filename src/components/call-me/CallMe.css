@@ -1,0 +1,103 @@
+.CallMe {
+    width: 70rem;
+    background: #0003;
+    backdrop-filter: blur(10px);
+}
+
+
+.CallMe .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.CallMe .innerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.2em;
+}
+
+.CallMe .mobile-number {
+    padding: 0.8rem;
+}
+
+.CallMe .mobile-number h4 {
+    font-size: 70px;
+    font-weight: 300;
+    color: #fff;
+
+}
+
+.CallMe .mobile-number span {
+    font-weight: 600;
+    color: #fff;
+}
+
+.CallMe button {
+    background: transparent;
+    color: #131313;
+    display: inline-block;
+    padding: 12px 42px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    border: 1px solid #ED1B1B;
+    letter-spacing: 0;
+    text-align: center;
+    color: #ED1B1B !important;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.CallMe button:hover {
+    background: #ED1B1B;
+    color: #fff !important;
+    border: 1px solid #ED1B1B;
+}
+
+.CallMe img {
+    width: auto;
+    height: 20vw;
+    border-radius: 1%;
+    filter: grayscale(1.5);
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .CallMe .container {
+        justify-content: start;
+
+    }
+
+    .CallMe .container img{
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .CallMe {
+        background: #0003;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        padding: 0.4rem;
+
+    }
+
+    .CallMe .container {
+        display: grid;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .CallMe .container .innerContainer {
+        flex-direction: column;
+    }
+
+    .CallMe img {
+        width: 100%;
+        height: unset;
+    }
+}

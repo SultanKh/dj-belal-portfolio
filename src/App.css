@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap');
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2em;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    color: #001D38;
+    font-weight: 600;
+}
+
+
+.app {
+    display: grid;
+    
+}
+
+.app .section-title {
+    padding: 0 1.5rem;
+}
+
+.app .section {
+    height: 105vh;
+    background: #f3f3f33b;
+}
+
+.app .section-2 {
+    display: grid;
+    justify-items: center;
+    background: url('./assets/cover1.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .app .section {
+        height: 180vh;
+    }
+}
